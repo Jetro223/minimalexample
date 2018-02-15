@@ -1,0 +1,11 @@
+﻿@model List<string>
+@{
+    Layout = null; //Layout = null, da sonst alles aus _Layout dupliziert wird
+}
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item</li>
+    }
+</ul>

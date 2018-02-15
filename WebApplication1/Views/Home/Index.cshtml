@@ -1,0 +1,10 @@
+﻿@model WebApplication1.Controllers.MyModel
+@{
+    Layout = "_Layout";
+}
+
+<h1>@Model.Text - @Model.Number</h1>
+
+<div>
+    @Html.Partial("_ListPartial", Model.StringListe)
+</div>
