@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using WebApplication1.Data;
 
 namespace WebApplication1
 {
@@ -23,7 +24,7 @@ namespace WebApplication1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
+            services.AddScoped(_ => new TestContext("Server=.;Database=DeleteMe;Integrated Security=true"));
             services.AddMvc();
         }
 
