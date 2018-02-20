@@ -23,5 +23,11 @@ namespace WebApplication1.Controllers
         {
             return View("_DataSaved", model);
         }
+
+        public object GetData()
+        {
+            var obj = new {Eins = 1, Zwei = 2, Drei = 3, Vier = 4};
+            return obj;
+        }
     }
 }

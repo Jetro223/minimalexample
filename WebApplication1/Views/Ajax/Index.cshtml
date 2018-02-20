@@ -7,12 +7,12 @@
 
 <div>
     @*Diese Form wird per Ajax abgesendet und das Ergebnis in das div mit der Id = result geladen
-      "Unterstützt" wird das durch jquery-unobtrusive-ajax.js
-        *@
+        "Unterstützt" wird das durch jquery-unobtrusive-ajax.js
+    *@
     <form asp-action="SaveData" asp-controller="Ajax" data-ajax="true" data-ajax-method="post" data-ajax-update="#result">
-        <input asp-for="Id" type="hidden"/>
-        <input asp-for="Name"/>
-        <input asp-for="Description"/>
+        <input asp-for="Id" type="hidden" />
+        <input asp-for="Name" />
+        <input asp-for="Description" />
         <button type="submit">Senden</button>
     </form>
 </div>
@@ -20,3 +20,16 @@
 <div id="result">
     Hier wird das Ergebnis angezeigt...
 </div>
+
+<div style="margin-top: 30px;">
+    <button data-command="getData" data-url="@Url.Action("GetData")">Daten via Ajax holen ohne Form</button>
+    <div id="data">
+        <div id="eins"></div>
+        <div id="zwei"></div>
+    </div>
+</div>
+
+@section scripts {
+
+    <script src="~/scripts/app/ajaxmodule.js"></script>
+}
