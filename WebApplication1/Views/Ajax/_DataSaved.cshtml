@@ -1,0 +1,15 @@
+﻿@model WebApplication1.Controllers.DataModel
+@{
+    Layout = null;
+}
+
+<h1>Result</h1>
+
+<div>
+    <ul>
+        <li>Name => @Model.Name</li>
+        <li>Description => @Model.Description</li>
+        <li>Zeit => @DateTime.Now.ToLongTimeString()</li>
+    </ul>
+</div>
+

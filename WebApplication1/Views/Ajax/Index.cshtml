@@ -1,0 +1,22 @@
+﻿@model WebApplication1.Controllers.DataModel
+@{
+    Layout = "_Layout";
+}
+
+<h1>Ajax Form</h1>
+
+<div>
+    @*Diese Form wird per Ajax abgesendet und das Ergebnis in das div mit der Id = result geladen
+      "Unterstützt" wird das durch jquery-unobtrusive-ajax.js
+        *@
+    <form asp-action="SaveData" asp-controller="Ajax" data-ajax="true" data-ajax-method="post" data-ajax-update="#result">
+        <input asp-for="Id" type="hidden"/>
+        <input asp-for="Name"/>
+        <input asp-for="Description"/>
+        <button type="submit">Senden</button>
+    </form>
+</div>
+
+<div id="result">
+    Hier wird das Ergebnis angezeigt...
+</div>

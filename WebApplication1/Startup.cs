@@ -36,6 +36,8 @@ namespace WebApplication1
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles(); //<= damit bsp. scripts etc. aus dem wwwroot geladen werden können
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
