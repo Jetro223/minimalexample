@@ -1,0 +1,22 @@
+{
+  "name": "ExampleApp",
+  "homepage": "https://github.com/Jetro223/minimalexample",
+  "authors": [
+    "Axel Schulze <schulze.axel@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "wwwroot/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "summernote": "^0.8.10"
+  }
+}
