@@ -14,9 +14,17 @@ namespace WebApplication1
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             Configuration = configuration;
+
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddJsonFile($"appsettings-{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
+
+            builder.AddEnvironmentVariables();
+            Configuration = builder.Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -35,7 +43,7 @@ namespace WebApplication1
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            
             app.UseStaticFiles(); //<= damit bsp. scripts etc. aus dem wwwroot geladen werden können
 
             app.UseMvc(routes =>
