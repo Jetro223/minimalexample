@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{736BD95F-9E0A-4883-9E03-E47DF81373A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinimalExample", "WebApplication1\MinimalExample.csproj", "{736BD95F-9E0A-4883-9E03-E47DF81373A2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{3883A0DD-3569-4B00-9B2A-05428E659F37}"
 EndProject

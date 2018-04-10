@@ -10,5 +10,11 @@ namespace WebApplication1.Controllers
         {
             return Content($"Authorized as {User.Identity.Name}");
         }
+
+        [Authorize(Policy = "SqlServerJobViewer")]
+        public IActionResult SqlServerJobViewer()
+        {
+            return Content($"Sql Server JobViewer: Authorized as {User.Identity.Name}");
+        }
     }
 }
